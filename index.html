@@ -190,14 +190,6 @@
   .project-card:nth-child(odd) { padding-right: 36px; border-right: 1px solid var(--rule); }
   .project-card:nth-child(even) { padding-left: 36px; }
   .project-card:nth-last-child(-n+2) { border-bottom: none; }
-  .project-card.span-full {
-    grid-column: 1 / -1; border-right: none; padding-right: 0; padding-left: 0;
-    display: grid; grid-template-columns: 1fr 1fr; gap: 0;
-    border-top: 1px solid var(--rule); border-bottom: none;
-    padding-top: 26px;
-  }
-  .project-card.span-full .proj-main { padding-right: 36px; border-right: 1px solid var(--rule); }
-  .project-card.span-full .proj-stack-block { padding-left: 36px; display: flex; flex-direction: column; justify-content: flex-end; }
   .project-org { font-family: 'IBM Plex Mono', monospace; font-size: 0.58rem; color: var(--muted); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 8px; }
   .project-name { font-family: 'Playfair Display', serif; font-size: 1.25rem; font-weight: 900; margin-bottom: 10px; line-height: 1.15; }
   .project-desc { font-size: 0.8rem; color: var(--ink2); line-height: 1.72; margin-bottom: 14px; flex: 1; font-weight: 300; }
@@ -258,9 +250,6 @@
     .project-card:nth-child(even) { padding-left: 0; }
     .project-card:nth-last-child(-n+2) { border-bottom: 1px solid var(--rule); }
     .project-card:last-child { border-bottom: none; }
-    .project-card.span-full { grid-template-columns: 1fr; border-top: 1px solid var(--rule); }
-    .project-card.span-full .proj-main { padding-right: 0; border-right: none; border-bottom: 1px solid var(--rule); padding-bottom: 16px; margin-bottom: 16px; }
-    .project-card.span-full .proj-stack-block { padding-left: 0; }
     .edu-strip { grid-template-columns: 1fr 1fr; }
     .edu-card:nth-child(2n) { border-right: none; }
     .edu-card:nth-child(3), .edu-card:nth-child(4) { border-top: 1px solid var(--rule); }
@@ -302,7 +291,7 @@
       </div>
     </div>
     <div class="hero-right">
-      <p class="hero-desc">Python Full Stack Developer with 9+ years of experience in designing, developing, and deploying scalable web applications. Strong expertise in backend systems, REST APIs, and performance optimization.Recently focused on Generative AI, working with LLMs, LangChain, Streamlit, open webui and vector databases like FAISS to build intelligent, data-driven applications.Looking to contribute to innovative teams where I can build high-performance systems and AI-powered solutions.</p>
+      <p class="hero-desc">Python Full Stack Developer with 9+ years of experience in designing, developing, and deploying scalable web applications. Strong expertise in backend systems, REST APIs, and performance optimization. Recently focused on Generative AI, working with LLMs, LangChain, Streamlit, open webui and vector databases like FAISS to build intelligent, data-driven applications. Looking to contribute to innovative teams where I can build high-performance systems and AI-powered solutions.</p>
       <div class="hero-stats">
         <div class="stat-card">
           <div class="stat-num" id="exp-years">9</div>
@@ -313,7 +302,8 @@
           <div class="stat-label">Major Projects</div>
         </div>
         <div class="stat-card">
-          <div class="stat-num">3</div>
+          <!-- FIX #2: corrected from 3 to 4 companies -->
+          <div class="stat-num">4</div>
           <div class="stat-label">Companies</div>
         </div>
       </div>
@@ -506,13 +496,13 @@
 </section>
 
 <div class="ruled-divider"><span>Featured Projects</span></div>
+
 <section id="projects">
   <div class="section-header reveal">
     <span class="section-num">03</span>
     <h2 class="section-title">Featured Projects</h2>
     <span class="section-aside">Portfolio</span>
   </div>
-
   <div class="projects-editorial">
 
     <!-- COSMO -->
@@ -578,117 +568,38 @@
     </div>
 
     <!-- Stackorigin -->
-<div class="project-card reveal">
-  <p class="project-org">Personal Project</p>
-  <h3 class="project-name">Stackorigin</h3>
-  <p class="project-desc">
-    Community-driven Q&A networking platform where engineers and developers collaborate
-    to share questions and answers — a Stack Overflow-inspired knowledge base.
-  </p>
+    <div class="project-card reveal">
+      <p class="project-org">Personal Project</p>
+      <h3 class="project-name">Stackorigin</h3>
+      <p class="project-desc">
+        Community-driven Q&amp;A networking platform where engineers and developers collaborate
+        to share questions and answers — a Stack Overflow-inspired knowledge base.
+      </p>
+      <div class="project-stack">
+        <span class="stack-tag">Python</span>
+        <span class="stack-tag">Django</span>
+        <span class="stack-tag">Community Q&amp;A</span>
+      </div>
+    </div>
 
-  <!-- MOVED SKILLS BELOW -->
-  <div class="project-stack">
-    <span class="stack-tag">Python</span>
-    <span class="stack-tag">Django</span>
-    <span class="stack-tag">Community Q&A</span>
-  </div>
-</div>
-
-
-<!-- JSONTOOL (RIGHT SIDE STYLE) -->
-<div class="project-card reveal">
-  <p class="project-org">Personal Project</p>
-  <h3 class="project-name">jsontool</h3>
-  <p class="project-desc">
-    JSON formatter, validator, and viewer tool for parsing, validating,
-    and beautifying JSON data with real-time error detection.
-  </p>
-
-  <div class="project-stack">
-    <span class="stack-tag">React.js</span>
-    <span class="stack-tag">HTML</span>
-    <span class="stack-tag">CSS</span>
-    <span class="stack-tag">JavaScript</span>
-  </div>
-</div>
+    <!-- jsontool -->
+    <div class="project-card reveal">
+      <p class="project-org">Personal Project</p>
+      <h3 class="project-name">jsontool</h3>
+      <p class="project-desc">
+        JSON formatter, validator, and viewer tool for parsing, validating,
+        and beautifying JSON data with real-time error detection.
+      </p>
+      <div class="project-stack">
+        <span class="stack-tag">React.js</span>
+        <span class="stack-tag">HTML</span>
+        <span class="stack-tag">CSS</span>
+        <span class="stack-tag">JavaScript</span>
+      </div>
+    </div>
 
   </div>
 </section>
-<!-- <section id="projects">
-  <div class="section-header reveal">
-    <span class="section-num">03</span>
-    <h2 class="section-title">Featured Projects</h2>
-    <span class="section-aside">Portfolio</span>
-  </div>
-  <div class="projects-editorial">
-    <div class="project-card reveal">
-      <p class="project-org">Microchip Technology · 1.5 years</p>
-      <h3 class="project-name">COSMO</h3>
-      <p class="project-desc">Centralized hardware lifecycle management platform automating inventory collection across multiple global locations. Tracks servers, controllers, disks, and GPUs with RBAC-based access, real-time visibility, and reporting.</p>
-      <div class="project-stack">
-        <span class="stack-tag">Python</span><span class="stack-tag">Django</span><span class="stack-tag">DRF</span>
-        <span class="stack-tag">MySQL</span><span class="stack-tag">RabbitMQ</span><span class="stack-tag">Celery</span>
-        <span class="stack-tag">Nginx</span><span class="stack-tag">LDAP</span>
-      </div>
-    </div>
-    <div class="project-card reveal">
-      <p class="project-org">Microchip Technology · 5 months</p>
-      <h3 class="project-name">PEDRO UI — GenAI Platform</h3>
-      <p class="project-desc">Internal Generative AI platform using RAG architecture for intelligent knowledge extraction. Features file ingestion pipelines, vector search, chat interface, and LDAP-secured role-based access.</p>
-      <div class="project-stack">
-        <span class="stack-tag">Python</span><span class="stack-tag">RAG</span><span class="stack-tag">Vector DB</span>
-        <span class="stack-tag">MySQL</span><span class="stack-tag">Nginx</span><span class="stack-tag">Gunicorn</span><span class="stack-tag">LDAP</span>
-      </div>
-    </div>
-    <div class="project-card reveal">
-      <p class="project-org">Indegene · 1 year</p>
-      <h3 class="project-name">IAB — Intelligent Action Brain</h3>
-      <p class="project-desc">ML-based analytics tool delivering data-driven insights. Built RESTful backend components with Django and deployed on AWS EC2. Managed performance monitoring and release cycles.</p>
-      <div class="project-stack">
-        <span class="stack-tag">Python</span><span class="stack-tag">Django</span><span class="stack-tag">REST API</span>
-        <span class="stack-tag">SQLite</span><span class="stack-tag">AWS S3</span><span class="stack-tag">Apache</span>
-      </div>
-    </div>
-    <div class="project-card reveal">
-      <p class="project-org">ZKTeco Biometrics · 1 year</p>
-      <h3 class="project-name">EasyTimePro</h3>
-      <p class="project-desc">Full-stack time and attendance management system built from scratch. Async task processing, caching, and a responsive UI for HR operations across enterprise environments.</p>
-      <div class="project-stack">
-        <span class="stack-tag">Python</span><span class="stack-tag">Django</span><span class="stack-tag">MySQL</span>
-        <span class="stack-tag">Celery</span><span class="stack-tag">Redis</span><span class="stack-tag">Bootstrap</span>
-      </div>
-    </div>
-    <div class="project-card span-full reveal">
-      <div class="proj-main">
-        <p class="project-org">Personal Project</p>
-        <h3 class="project-name">Stackorigin</h3>
-        <p class="project-desc">Community-driven Q&amp;A networking platform where engineers and developers collaborate to share questions and answers — a Stack Overflow-inspired knowledge base built from the ground up.</p>
-      </div>
-      <div class="proj-stack-block">
-        <div class="project-stack">
-          <span class="stack-tag">Python</span><span class="stack-tag">Django</span><span class="stack-tag">Community Q&amp;A</span>
-        </div>
-      </div>
-    </div>
-  </div>
-
-
-  <div class="project-card reveal">
-    <p class="project-org">Personal Project</p>
-    <h3 class="project-name">jsontool</h3>
-    <p class="project-desc">
-      JSON formatter, validator, and viewer tool for parsing, validating,
-      and beautifying JSON data with real-time error detection.
-    </p>
-    <div class="project-stack">
-      <span class="stack-tag">React.js</span>
-      <span class="stack-tag">HTML</span>
-      <span class="stack-tag">CSS</span>
-      <span class="stack-tag">JavaScript</span>
-    </div>
-  </div>
-  
-</section> -->
 
 <div class="ruled-divider"><span>Education</span></div>
 
@@ -749,25 +660,33 @@
   </div>
 </section>
 
+<!-- FIX #4: dynamic copyright year -->
 <footer>
-  <p>&copy; 2025 Harikrishna Palla · Bengaluru, Karnataka</p>
+  <p>&copy; <span id="footer-year"></span> Harikrishna Palla · Bengaluru, Karnataka</p>
   <p>Python Full Stack Developer · <span id="exp-footer">9</span> Yrs Experience</p>
 </footer>
 
 <script>
   (function() {
+    // Dynamic experience years from March 2017
     const start = new Date(2017, 2, 1);
     const now = new Date();
     const months = (now.getFullYear() - start.getFullYear()) * 12 + (now.getMonth() - start.getMonth());
     const years = (months / 12).toFixed(1);
+
+    // FIX #1: removed the broken getElementById('exp-desc') call
     document.getElementById('exp-years').textContent = years;
-    document.getElementById('exp-desc').textContent = years;
     document.getElementById('exp-footer').textContent = years;
+
+    // FIX #4: dynamic copyright year
+    document.getElementById('footer-year').textContent = now.getFullYear();
   })();
 
   const revealEls = document.querySelectorAll('.reveal');
   const io = new IntersectionObserver((entries) => {
-    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+    entries.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+    });
   }, { threshold: 0.06 });
   revealEls.forEach(el => io.observe(el));
 </script>
